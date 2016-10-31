@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
-
     <include file="de/jughh/cuba/ordermanagement/screens.xml"/>
-
+    <screen id="jughh$Customer.browse"
+            template="de/jughh/cuba/ordermanagement/web/customer/customer-browse.xml"/>
+    <screen id="jughh$Customer.edit"
+            template="de/jughh/cuba/ordermanagement/web/customer/customer-edit.xml"/>
+    <screen id="jughh$LineItem.edit"
+            template="de/jughh/cuba/ordermanagement/web/lineitem/line-item-edit.xml"/>
+    <screen id="jughh$Order.edit"
+            template="de/jughh/cuba/ordermanagement/web/order/order-edit.xml"/>
+    <screen id="jughh$Order.browse"
+            template="de/jughh/cuba/ordermanagement/web/order/order-browse.xml"/>
+    <screen id="jughh$Product.browse"
+            template="de/jughh/cuba/ordermanagement/web/product/product-browse.xml"/>
+    <screen id="jughh$Product.edit"
+            template="de/jughh/cuba/ordermanagement/web/product/product-edit.xml"/>
 </screen-config>

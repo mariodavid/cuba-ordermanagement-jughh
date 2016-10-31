@@ -1,1 +1,10 @@
-
+-- begin JUGHH_LINE_ITEM
+alter table JUGHH_LINE_ITEM add constraint FK_JUGHH_LINE_ITEM_PRODUCT foreign key (PRODUCT_ID) references JUGHH_PRODUCT(ID)^
+alter table JUGHH_LINE_ITEM add constraint FK_JUGHH_LINE_ITEM_ORDER foreign key (ORDER_ID) references JUGHH_ORDER(ID)^
+create index IDX_JUGHH_LINE_ITEM_ORDER on JUGHH_LINE_ITEM (ORDER_ID)^
+create index IDX_JUGHH_LINE_ITEM_PRODUCT on JUGHH_LINE_ITEM (PRODUCT_ID)^
+-- end JUGHH_LINE_ITEM
+-- begin JUGHH_ORDER
+alter table JUGHH_ORDER add constraint FK_JUGHH_ORDER_CUSTOMER foreign key (CUSTOMER_ID) references JUGHH_CUSTOMER(ID)^
+create index IDX_JUGHH_ORDER_CUSTOMER on JUGHH_ORDER (CUSTOMER_ID)^
+-- end JUGHH_ORDER

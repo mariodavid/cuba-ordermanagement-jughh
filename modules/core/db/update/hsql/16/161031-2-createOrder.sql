@@ -1,0 +1,2 @@
+alter table JUGHH_ORDER add constraint FK_JUGHH_ORDER_CUSTOMER foreign key (CUSTOMER_ID) references JUGHH_CUSTOMER(ID);
+create index IDX_JUGHH_ORDER_CUSTOMER on JUGHH_ORDER (CUSTOMER_ID);

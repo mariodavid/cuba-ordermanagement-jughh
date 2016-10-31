@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="de.jughh.cuba.ordermanagement.web.product.ProductBrowse"
+        focusComponent="productsTable"
+        lookupComponent="productsTable"
+        messagesPack="de.jughh.cuba.ordermanagement.web.product">
+    <dsContext>
+        <collectionDatasource id="productsDs"
+                              class="de.jughh.cuba.ordermanagement.entity.Product"
+                              view="_local">
+            <query>
+                <![CDATA[select e from jughh$Product e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="productsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="productsTable"
+                datasource="productsDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="productsTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+            </columns>
+            <rows datasource="productsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="productsTable.create"/>
+                <button id="editBtn"
+                        action="productsTable.edit"/>
+                <button id="removeBtn"
+                        action="productsTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>
