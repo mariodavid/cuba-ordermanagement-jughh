@@ -25,8 +25,9 @@ The following example requirements have to be implemented in the application:
     * print the latest order for a selected customer in the customer list
 
 For more information around the topics you can take a look at the blog posts:
-[CUBA Filters - the fast food of business software - Road to CUBA and beyond](https://www.road-to-cuba-and-beyond.com/cuba-filters-the-fast-food-of-business-software/)
-[CUBA Security subsystem distilled - Road to CUBA and beyond](https://www.road-to-cuba-and-beyond.com/cuba-security-subsystem-distilled/)
+
+* [CUBA Filters - the fast food of business software - Road to CUBA and beyond](https://www.road-to-cuba-and-beyond.com/cuba-filters-the-fast-food-of-business-software/)
+* [CUBA Security subsystem distilled - Road to CUBA and beyond](https://www.road-to-cuba-and-beyond.com/cuba-security-subsystem-distilled/)
 
 ### Branches
 
