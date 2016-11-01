@@ -6,7 +6,7 @@ This is an example CUBA application that is used for the Java User Group Hamburg
 ### current domain model
 
 The example contains the following domain model that is the starting point for the application:
-![Domain model](docs/domain-modell.png)
+![Domain model](docs/domain-model.png)
 
 ### Example requirements
 
