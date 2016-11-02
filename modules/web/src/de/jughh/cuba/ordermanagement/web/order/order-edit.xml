@@ -22,6 +22,7 @@
             <column width="250px">
                 <field id="customer"/>
                 <field id="orderDate"/>
+                <field id="orderstatus"/>
             </column>
         </fieldGroup>
         <groupBox id="lineItemsBox"

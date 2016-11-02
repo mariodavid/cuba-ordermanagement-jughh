@@ -30,6 +30,7 @@ create table JUGHH_PRODUCT (
     DELETED_BY varchar(50),
     --
     NAME varchar(255) not null,
+    CATEGORY_ID varchar(36),
     --
     primary key (ID)
 )^
@@ -66,7 +67,24 @@ create table JUGHH_ORDER (
     --
     CUSTOMER_ID varchar(36) not null,
     ORDER_DATE date not null,
+    ORDERSTATUS varchar(50) not null,
     --
     primary key (ID)
 )^
 -- end JUGHH_ORDER
+-- begin JUGHH_PRODUCT_CATEGORY
+create table JUGHH_PRODUCT_CATEGORY (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    NAME varchar(255) not null,
+    --
+    primary key (ID)
+)^
+-- end JUGHH_PRODUCT_CATEGORY

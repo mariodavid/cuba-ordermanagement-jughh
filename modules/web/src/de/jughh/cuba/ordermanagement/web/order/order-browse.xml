@@ -33,6 +33,7 @@
             <columns>
                 <column id="customer"/>
                 <column id="orderDate"/>
+                <column id="orderstatus"/>
             </columns>
             <rows datasource="ordersDs"/>
             <rowsCount/>

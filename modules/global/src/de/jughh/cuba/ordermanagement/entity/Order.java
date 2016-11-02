@@ -34,6 +34,18 @@ public class Order extends StandardEntity {
     @OneToMany(mappedBy = "order")
     protected Set<LineItem> lineItems;
 
+    @Column(name = "ORDERSTATUS", nullable = false)
+    protected String orderstatus;
+
+    public void setOrderstatus(Orderstatus orderstatus) {
+        this.orderstatus = orderstatus == null ? null : orderstatus.getId();
+    }
+
+    public Orderstatus getOrderstatus() {
+        return orderstatus == null ? null : Orderstatus.fromId(orderstatus);
+    }
+
+
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }

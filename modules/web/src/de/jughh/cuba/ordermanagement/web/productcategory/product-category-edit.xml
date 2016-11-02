@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editCaption"
-        class="de.jughh.cuba.ordermanagement.web.product.ProductEdit"
-        datasource="productDs"
+        class="de.jughh.cuba.ordermanagement.web.productcategory.ProductCategoryEdit"
+        datasource="productCategoryDs"
         focusComponent="fieldGroup"
-        messagesPack="de.jughh.cuba.ordermanagement.web.product">
+        messagesPack="de.jughh.cuba.ordermanagement.web.productcategory">
     <dsContext>
-        <datasource id="productDs"
-                    class="de.jughh.cuba.ordermanagement.entity.Product"
-                    view="product-view"/>
+        <datasource id="productCategoryDs"
+                    class="de.jughh.cuba.ordermanagement.entity.ProductCategory"
+                    view="_local"/>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
     <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="productDs">
+                    datasource="productCategoryDs">
             <column width="250px">
                 <field id="name"/>
-                <field id="category"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
-        class="de.jughh.cuba.ordermanagement.web.product.ProductBrowse"
-        focusComponent="productsTable"
-        lookupComponent="productsTable"
-        messagesPack="de.jughh.cuba.ordermanagement.web.product">
+        class="de.jughh.cuba.ordermanagement.web.productcategory.ProductCategoryBrowse"
+        focusComponent="productCategoriesTable"
+        lookupComponent="productCategoriesTable"
+        messagesPack="de.jughh.cuba.ordermanagement.web.productcategory">
     <dsContext>
-        <collectionDatasource id="productsDs"
-                              class="de.jughh.cuba.ordermanagement.entity.Product"
-                              view="product-view">
+        <collectionDatasource id="productCategoriesDs"
+                              class="de.jughh.cuba.ordermanagement.entity.ProductCategory"
+                              view="_local">
             <query>
-                <![CDATA[select e from jughh$Product e]]>
+                <![CDATA[select e from jughh$ProductCategory e]]>
             </query>
         </collectionDatasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="productsTable"
+    <layout expand="productCategoriesTable"
             spacing="true">
         <filter id="filter"
-                applyTo="productsTable"
-                datasource="productsDs">
+                applyTo="productCategoriesTable"
+                datasource="productCategoriesDs">
             <properties include=".*"/>
         </filter>
-        <table id="productsTable"
+        <table id="productCategoriesTable"
                width="100%">
             <actions>
                 <action id="create"/>
@@ -32,18 +32,17 @@
             </actions>
             <columns>
                 <column id="name"/>
-                <column id="category"/>
             </columns>
-            <rows datasource="productsDs"/>
+            <rows datasource="productCategoriesDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn"
-                        action="productsTable.create"/>
+                        action="productCategoriesTable.create"/>
                 <button id="editBtn"
-                        action="productsTable.edit"/>
+                        action="productCategoriesTable.edit"/>
                 <button id="removeBtn"
-                        action="productsTable.remove"/>
+                        action="productCategoriesTable.remove"/>
             </buttonsPanel>
         </table>
     </layout>

@@ -15,4 +15,8 @@
             template="de/jughh/cuba/ordermanagement/web/product/product-browse.xml"/>
     <screen id="jughh$Product.edit"
             template="de/jughh/cuba/ordermanagement/web/product/product-edit.xml"/>
+    <screen id="jughh$ProductCategory.edit"
+            template="de/jughh/cuba/ordermanagement/web/productcategory/product-category-edit.xml"/>
+    <screen id="jughh$ProductCategory.browse"
+            template="de/jughh/cuba/ordermanagement/web/productcategory/product-category-browse.xml"/>
 </screen-config>

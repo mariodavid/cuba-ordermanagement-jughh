@@ -7,5 +7,6 @@
         <class>de.jughh.cuba.ordermanagement.entity.Product</class>
         <class>de.jughh.cuba.ordermanagement.entity.LineItem</class>
         <class>de.jughh.cuba.ordermanagement.entity.Order</class>
+        <class>de.jughh.cuba.ordermanagement.entity.ProductCategory</class>
     </persistence-unit>
 </persistence>
