@@ -14,6 +14,7 @@ create table JUGHH_CUSTOMER (
     STREET varchar(255) not null,
     POSTCODE varchar(5),
     CITY varchar(255) not null,
+    STATE varchar(255) not null,
     --
     primary key (ID)
 )^

@@ -27,6 +27,18 @@ public class Customer extends StandardEntity {
     @Column(name = "CITY", nullable = false)
     protected String city;
 
+    @Column(name = "STATE", nullable = false)
+    protected String state;
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+
     public void setName(String name) {
         this.name = name;
     }

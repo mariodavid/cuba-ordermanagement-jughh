@@ -2,17 +2,17 @@
 -- customer test data
 ------------------------------------------------------------------------------------------------------
 insert into JUGHH_CUSTOMER
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, FIRST_NAME, STREET, POSTCODE, CITY)
-values ('aa75ff91-532d-ad8c-02bb-c78a9d713d96', 1, '2016-11-01 22:03:51', 'admin', '2016-11-01 22:03:51', null, null, null, 'Blevins', 'Charles', '3170 Pin Oak Drive', '90706', 'Bellflower');
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, FIRST_NAME, STREET, POSTCODE, CITY, STATE) 
+values ('aa75ff91-532d-ad8c-02bb-c78a9d713d96', 1, '2016-11-01 22:03:51', 'admin', '2016-11-01 22:03:51', null, null, null, 'Blevins', 'Charles', '3170 Pin Oak Drive', '90706', 'Bellflower', 'NH');
 insert into JUGHH_CUSTOMER
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, FIRST_NAME, STREET, POSTCODE, CITY)
-values ('e99cfda9-674d-bc85-9036-c788b9a33e30', 1, '2016-11-01 22:04:30', 'admin', '2016-11-01 22:04:30', null, null, null, 'Velasquez', 'Amanda', '18 Emily Drive', '29201', 'Columbia');
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, FIRST_NAME, STREET, POSTCODE, CITY, STATE) 
+values ('e99cfda9-674d-bc85-9036-c788b9a33e30', 1, '2016-11-01 22:04:30', 'admin', '2016-11-01 22:04:30', null, null, null, 'Velasquez', 'Amanda', '18 Emily Drive', '29201', 'Columbia', 'FL');
 insert into JUGHH_CUSTOMER
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, FIRST_NAME, STREET, POSTCODE, CITY)
-values ('2be610b5-0dc2-1a61-d09a-a1b2c22c8ba2', 1, '2016-11-01 22:05:03', 'admin', '2016-11-01 22:05:03', null, null, null, 'Lister', 'Amy', '4289 Masonic Hill Road', '71901', 'Hot Springs');
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, FIRST_NAME, STREET, POSTCODE, CITY, STATE) 
+values ('2be610b5-0dc2-1a61-d09a-a1b2c22c8ba2', 1, '2016-11-01 22:05:03', 'admin', '2016-11-01 22:05:03', null, null, null, 'Lister', 'Amy', '4289 Masonic Hill Road', '71901', 'Hot Springs', 'MA');
 insert into JUGHH_CUSTOMER
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, FIRST_NAME, STREET, POSTCODE, CITY)
-values ('ffd2a2ca-3826-4a7c-8def-623f12e4e0cf', 1, '2016-11-01 22:05:41', 'admin', '2016-11-01 22:05:41', null, null, null, 'Edwards', 'Michael', '1810 Edgewood Avenue', '93721', 'Fresno');
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, FIRST_NAME, STREET, POSTCODE, CITY, STATE) 
+values ('ffd2a2ca-3826-4a7c-8def-623f12e4e0cf', 1, '2016-11-01 22:05:41', 'admin', '2016-11-01 22:05:41', null, null, null, 'Edwards', 'Michael', '1810 Edgewood Avenue', '93721', 'Fresno', 'CA');
 
 
 ------------------------------------------------------------------------------------------------------
@@ -304,3 +304,42 @@ values ('1a6b6b1b-4347-22ca-bffe-83ad1d3a5d17', 1, '2016-11-02 12:59:22', 'admin
 ------------------------------------------------------------------------------------------------------
 -- security (walter)
 ------------------------------------------------------------------------------------------------------
+insert into SEC_GROUP 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID) 
+values ('1637b35f-3423-2708-77ec-54b1c12bc0e5', 2, '2016-11-02 13:10:50', 'admin', '2016-11-02 13:11:03', 'admin', null, null, 'Sales', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93');
+
+insert into SEC_GROUP 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID) 
+values ('617bd80e-2a63-8856-d920-bd2185950aae', 1, '2016-11-02 13:11:08', 'admin', '2016-11-02 13:11:08', null, null, null, 'Northeast', '1637b35f-3423-2708-77ec-54b1c12bc0e5');
+
+insert into SEC_CONSTRAINT 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, CHECK_TYPE, OPERATION_TYPE, CODE, ENTITY_NAME, JOIN_CLAUSE, WHERE_CLAUSE, GROOVY_SCRIPT, FILTER_XML, IS_ACTIVE, GROUP_ID) 
+values ('63cc5251-cede-b78d-4a39-f7d2994288b1', 1, '2016-11-02 13:12:21', 'admin', '2016-11-02 13:12:21', null, null, null, 'db', 'read', null, 'jughh$Customer', null, '{E}.state = ''NH'' or {E}.state = ''MA''', null, '<?xml version="1.0" encoding="UTF-8"?>
+
+<filter>
+  <and>
+    <c name="state" class="java.lang.String" operatorType="EQUAL" width="1" type="PROPERTY"><![CDATA[queryEntity.state = :component$filterWithoutId.state18058]]>
+      <param name="component$filterWithoutId.state18058" javaClass="java.lang.String">NULL</param>
+    </c>
+  </and>
+</filter>
+', true, '617bd80e-2a63-8856-d920-bd2185950aae');
+
+insert into SEC_CONSTRAINT 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, CHECK_TYPE, OPERATION_TYPE, CODE, ENTITY_NAME, JOIN_CLAUSE, WHERE_CLAUSE, GROOVY_SCRIPT, FILTER_XML, IS_ACTIVE, GROUP_ID) 
+values ('036f0cdf-d468-4c4d-d0e7-c174ec9a448a', 1, '2016-11-02 13:13:26', 'walter', '2016-11-02 13:13:26', null, null, null, 'db', 'read', null, 'jughh$Order', null, '{E}.customer.state = ''NH'' or {E}.customer.state = ''MA''', null, '<?xml version="1.0" encoding="UTF-8"?>
+
+<filter>
+  <and>
+    <c name="customer.state" class="java.lang.String" operatorType="EQUAL" width="1" type="PROPERTY"><![CDATA[queryEntity.customer.state = :component$filterWithoutId.customer_state10737]]>
+      <param name="component$filterWithoutId.customer_state10737" javaClass="java.lang.String">NULL</param>
+    </c>
+  </and>
+</filter>
+', true, '617bd80e-2a63-8856-d920-bd2185950aae');
+
+
+
+insert into SEC_USER 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, LOGIN, LOGIN_LC, PASSWORD, NAME, FIRST_NAME, LAST_NAME, MIDDLE_NAME, POSITION_, EMAIL, LANGUAGE_, TIME_ZONE, TIME_ZONE_AUTO, ACTIVE, CHANGE_PASSWORD_AT_LOGON, GROUP_ID, IP_MASK) 
+values ('6eaaf429-d86d-2e7b-c1e9-2456ca0840af', 2, '2016-11-02 13:10:38', 'admin', '2016-11-02 13:11:21', 'admin', null, null, 'walter', 'walter', '712cc54e56495dc24eef0f447526cbd35dd91341', 'Walter White', 'Walter', 'White', 'Hartwell', null, null, 'en', null, null, true, false, '617bd80e-2a63-8856-d920-bd2185950aae', null);
