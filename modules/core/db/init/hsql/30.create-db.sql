@@ -130,3 +130,177 @@ values ('b06d6eb4-447f-31e8-bbec-4f48f8c0dc61', 1, '2016-11-02 12:52:33', 'admin
   </and>
 </filter>
 ', '60885987-1b61-4247-94c7-dff348347f93');
+
+
+
+------------------------------------------------------------------------------------------------------
+-- security (jesse)
+------------------------------------------------------------------------------------------------------
+insert into SEC_ROLE 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LOC_NAME, DESCRIPTION, ROLE_TYPE, IS_DEFAULT_ROLE) 
+values ('0af74ecd-1033-47c6-7e23-d2e1689b131d', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 'Master Data Manager', null, null, 0, null);
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('98e23577-46b4-d6d0-404a-cc7bc5036b81', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Product:create', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('81b4df97-1006-f9e2-2c65-03acf2ec57aa', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$Role:create', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('a4438510-f73d-235d-5564-3e0304d45909', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 10, 'jughh$Customer.browse', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('6d4c6045-06b0-09f0-3524-e0c204373e11', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$LineItem:create', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('a3189c76-46c1-7356-128b-1c5a493a9c98', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Order:read', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('c1e82af3-1243-0b96-58db-e974c330acdc', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 10, 'jughh$Product.browse', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('84d46f4a-7382-bac1-3261-d21a8635669c', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Customer:create', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('10d340fd-9fb0-e4eb-24ea-90c4002227b6', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$Group:read', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('a74e9333-7545-b9e2-b120-4de004286d63', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Order:create', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('f89260a6-3138-45dd-459a-98229e0f2ef2', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$LineItem:delete', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('3a635312-1f42-e0a8-c54d-4ebc74b08d4c', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$Group:update', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('b0d28af2-3c80-aac4-1746-3ef5c8de2990', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$User:create', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('22b54a37-2dca-5340-91dd-9a1a667eb66a', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$ProductCategory:create', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('1d743d66-3aba-2aa9-a804-f181a37b7863', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$ProductCategory:delete', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('fe0b8b58-5c69-3911-1b37-bf6c0715d4c6', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$Role:read', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('2a6bad53-dd01-f6a5-6c05-c13ff15b8a18', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$Role:delete', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('4ca57c9e-660d-6c2b-d4e8-23f2260254a3', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$Group:delete', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('90a69c79-1599-bbfe-d1f6-f4c43c26c74a', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$Role:update', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('4e9677de-abde-6d5e-1055-25ea27e62e39', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$LineItem:update', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('7f8756ce-a4ff-4ca1-4b68-af639d677411', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Order:delete', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('50f9fffd-6cbb-7a85-45c2-07ee0aede9d0', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Customer:update', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('c355714d-f22b-6490-5061-40d94ece2a3e', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$User:delete', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('ac5edc76-4480-3488-f4ec-298fc3686687', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$Group:create', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('c93b67d0-d7dd-8ab4-99de-ff4628733cc7', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Product:update', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('d999e294-d37a-e048-ee36-fcbc00feca24', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Order:update', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('af9f5efc-1156-0a2c-b628-33df4e734bef', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 10, 'administration', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('0b509703-b39a-0070-6160-7213189754a9', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$ProductCategory:update', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('02e416fe-56e8-c814-1110-e2f2408c287c', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$User:update', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('1728cee6-aed9-cf82-ba73-f8c29e04d8d5', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$ProductCategory:read', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('ddd7ea4b-c734-e362-82d6-e5964dbc8381', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 10, 'jughh$Order.browse', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('287824e0-e05b-322b-35e0-4a969913cc3a', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Product:read', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('d11ae13d-8f4f-aa73-2911-c4fa25bd2e34', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 10, 'jughh$ProductCategory.browse', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('d085cdb1-ac7a-1c05-1518-e772870543df', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Customer:delete', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('948fa5f4-f469-5bd5-72ed-01e9d5e5e15d', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$LineItem:read', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('6bec9995-3d29-25df-7585-0906fda951d9', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Customer:read', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('bccf9740-1be0-a9e5-01f6-eeae89df67b3', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'jughh$Product:delete', 1, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) 
+values ('d0c45fe6-09ee-b6ca-5576-1da0a754763a', 1, '2016-11-02 12:58:06', 'admin', '2016-11-02 12:58:06', null, null, null, 20, 'sec$User:read', 0, '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+
+
+
+insert into SEC_USER 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, LOGIN, LOGIN_LC, PASSWORD, NAME, FIRST_NAME, LAST_NAME, MIDDLE_NAME, POSITION_, EMAIL, LANGUAGE_, TIME_ZONE, TIME_ZONE_AUTO, ACTIVE, CHANGE_PASSWORD_AT_LOGON, GROUP_ID, IP_MASK) 
+values ('ba4c3113-965b-23f3-ec0d-c13671faf2ed', 1, '2016-11-02 12:59:22', 'admin', '2016-11-02 12:59:22', null, null, null, 'jesse', 'jesse', '1b9c9daa36e307025e0ec65604984b3c6d91e72d', 'Jesse Pinkman', 'Jesse', 'Pinkman', null, null, null, 'en', null, null, true, false, '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', null);
+
+insert into SEC_USER_ROLE 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, USER_ID, ROLE_ID) 
+values ('1a6b6b1b-4347-22ca-bffe-83ad1d3a5d17', 1, '2016-11-02 12:59:22', 'admin', '2016-11-02 12:59:22', null, null, null, 'ba4c3113-965b-23f3-ec0d-c13671faf2ed', '0af74ecd-1033-47c6-7e23-d2e1689b131d');
+
+
+
+------------------------------------------------------------------------------------------------------
+-- security (walter)
+------------------------------------------------------------------------------------------------------
