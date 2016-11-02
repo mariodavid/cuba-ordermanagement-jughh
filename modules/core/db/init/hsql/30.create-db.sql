@@ -98,3 +98,35 @@ values ('a70c77fd-a3f4-aa0c-d4f5-b258759232b6', 1, '2016-11-01 22:11:12', 'admin
 insert into JUGHH_LINE_ITEM
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRICE, PRODUCT_ID, QUANTITY, ORDER_ID)
 values ('93fdf193-7416-874e-49fc-75774d35ec0a', 1, '2016-11-01 22:11:12', 'admin', '2016-11-01 22:11:12', null, null, null, 650.00, 'a3ca404c-8150-354c-d51a-f52742a0aef4', 8, 'a8407f4d-e300-f21b-021c-7dee66294fa1');
+
+
+
+------------------------------------------------------------------------------------------------------
+-- filters
+------------------------------------------------------------------------------------------------------
+insert into SEC_FILTER 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, COMPONENT, NAME, CODE, XML, USER_ID) 
+values ('c7587ba3-bf73-f13c-db2d-1f7888e5a371', 5, '2016-11-02 12:39:50', 'admin', '2016-11-02 12:42:57', 'admin', null, null, '[jughh$Order.browse].filter', 'Orders from last year', null, '<?xml version="1.0" encoding="UTF-8"?>
+
+<filter>
+  <and>
+    <c name="qwJOggrfEO" unary="true" hidden="true" required="true" width="1" type="CUSTOM" locCaption="Orders from last year" entityAlias="e"><![CDATA[@between({E}.orderDate, now-365, now, day)]]>
+      <param name="component$filter.qwJOggrfEO50692" javaClass="java.lang.Boolean">true</param>
+    </c>
+  </and>
+</filter>
+', null);
+
+insert into SEC_FILTER 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, COMPONENT, NAME, CODE, XML, USER_ID) 
+values ('b06d6eb4-447f-31e8-bbec-4f48f8c0dc61', 1, '2016-11-02 12:52:33', 'admin', '2016-11-02 12:52:33', null, null, null, '[jughh$Order.browse].filter', 'Orders with Product in Category ...', null, '<?xml version="1.0" encoding="UTF-8"?>
+
+<filter>
+  <and>
+    <c name="GyOPBQtNcz" class="de.jughh.cuba.ordermanagement.entity.ProductCategory" width="1" type="CUSTOM" locCaption="Orders with Product in Category ..." entityAlias="e"><![CDATA[li.product.category.id = :component$filter.GyOPBQtNcz68135]]>
+      <param name="component$filter.GyOPBQtNcz68135" javaClass="de.jughh.cuba.ordermanagement.entity.ProductCategory">NULL</param>
+      <join><![CDATA[join {E}.lineItems li]]></join>
+    </c>
+  </and>
+</filter>
+', '60885987-1b61-4247-94c7-dff348347f93');
