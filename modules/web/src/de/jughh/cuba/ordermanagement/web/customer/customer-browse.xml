@@ -29,6 +29,10 @@
                 <action id="create"/>
                 <action id="edit"/>
                 <action id="remove"/>
+                <action id="latestOrderAction"
+                        caption="msg://latestOrder"
+                        invoke="latestOrder"
+                        trackSelection="true"/>
             </actions>
             <columns>
                 <column id="name"/>
@@ -48,6 +52,9 @@
                         action="customersTable.edit"/>
                 <button id="removeBtn"
                         action="customersTable.remove"/>
+                <button id="latestOrderBtn"
+                        action="customersTable.latestOrderAction"
+                        icon="font-icon:BITCOIN"/>
             </buttonsPanel>
         </table>
     </layout>
