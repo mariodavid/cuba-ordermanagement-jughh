@@ -31,12 +31,11 @@ For more information around the topics you can take a look at the blog posts:
 
 ### Branches
 
-The branches that you'll find here correspond contain the implemented solutions for the different example requirements.
-If you want to look at a certain solution just do the following command line magic:
+In this example application you'll find four branches, that already have implemented the solution for the different example requirements.
+If you want to look at a certain solutions just do the following command line magic:
 
 ````
 git clone https://github.com/mariodavid/cuba-ordermanagement-jughh.git
 cd cuba-ordermanagement-jughh
 git checkout my-branch
 ````
-
